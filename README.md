@@ -10,6 +10,6 @@ An *Esoteric Build System* and Satirical Programming Language based on `.prabowo
 ## Code Example
 ```text
 pidato {
-  c{"echo " "di " "papua " "harus tanam "sawit"}
+  c{"echo " "di " "papua " "harus tanam " "sawit"}
 }
 ```
