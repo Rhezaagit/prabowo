@@ -11,6 +11,12 @@
 #         - c for concat string
 #         - f for file pattern
 
+
+!cc = "gcc"
+!src = f{"./*.c"}
+!arg = "-I./ -std=c99 -o"
+!out = "prabowo" # the actual build system name.
+
 # this is how you declared label 
 # label can have a argument like this
 mbg a b c {
@@ -33,10 +39,13 @@ mbg a b c {
 
 bikin_kopdes {
   c{ 
-    "gcc " # no , needed
-    f{"./*.c "} 
-    "-I./ -std=c99 -o " 
-    "prabowo" # the actual build system name.
+    !cc # no , needed
+    " "
+    !src 
+    " "
+    !arg 
+    " "
+    !out
   }
   # result gcc main.c etc.c -g -I./ -std=c99 -o prabowo
 
