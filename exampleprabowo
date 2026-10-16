@@ -1,0 +1,63 @@
+# this is var declaration
+!kondisi_udara = c{"ispu " "level " "bahaya " "kabut " "asap"}
+!solusi_internal = c{"pasrah " "tunggu " "hujan " "turun"}
+!kata_kata = c{"orang " "desa gak pake " "dollar"} 
+#            ^
+#         this called body mode.
+#         how to use this is simple
+#
+#         [mode name]{}
+#         there 2 type of mode that available.
+#         - c for concat string
+#         - f for file pattern
+
+# this is how you declared label 
+# label can have a argument like this
+mbg a b c {
+  c{
+    "echo " # no , needed
+    !a # count as literal,
+    # this is how you use variable using the ![var name], if there a same name in 
+    # label argument it will use that instead.
+    # if no variaable was found it just default to ""
+
+    !b
+    !c
+  }
+
+  c{
+    "echo "
+    !kata_kata
+  }
+}
+
+bikin_kopdes {
+  c{ 
+    "gcc " # no , needed
+    f{"./*.c "} 
+    "-I./ -std=c99 -o " 
+    "prabowo" # the actual build system name.
+  }
+  # result gcc main.c etc.c -g -I./ -std=c99 -o prabowo
+
+  "" # if you put only like this it only executing inside this string.
+}
+
+pidato { # the pidato label is the main.
+
+  $mbg {
+    # this where you put your argument
+    # no , needed
+    "mbg" # this is called literal. 
+    " ="
+    " makanan beracun gratis"
+  } 
+  # this how you calling a label,
+  # if no label found it not do anything.
+}
+
+# to run it you save this as ".prabowo"
+
+# compile
+# gcc main.c etc.c -g -I./ -o prabowo
+# then run "prabowo" command.
