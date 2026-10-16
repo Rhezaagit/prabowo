@@ -28,9 +28,9 @@ void Eval_AddStackPointer(var_info info) {
 }
 
 void Eval_RemoveStackPointer(size_t count) {
-  if (count <= 0 || info_var_stack->length <= 0) return;
+  if (count == 0 || info_var_stack->length == 0 || count > info_var_stack->length) return;
 
-  size_t final_length = (info_var_stack->length - 1) - count;
+  size_t final_length = info_var_stack->length - count;
 
   for (size_t i = final_length;  i < info_var_stack->length; i++) {
     free(List_At(info_var_stack, i, var_info).value);
