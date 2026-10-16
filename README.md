@@ -19,7 +19,7 @@ Run the interpreter with your script file:
 ```bash
 ./prabowo 
 ```
-Make Sure That exampleprabowo renamed to .prabowo
+Make Sure That `exampleprabowo` renamed to `.prabowo`
 
 ## Code Example
 ```text
