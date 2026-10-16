@@ -60,4 +60,5 @@ pidato { # the pidato label is the main.
 
 # compile
 # gcc main.c etc.c -g -I./ -o prabowo
-# then run "prabowo" command.
+# then run "./prabowo" command.
+# before that rename this file to .prabowo
