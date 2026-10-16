@@ -9,7 +9,6 @@ An *Esoteric Build System* and Satirical Programming Language based on `.prabowo
 
 ## Code Example
 ```text
-# (Paste your .prabowo code here)
 pidato {
   c{"echo " "di " "papua " "harus tanam "sawit"}
 }
