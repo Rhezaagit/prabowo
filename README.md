@@ -9,7 +9,7 @@ An *Esoteric Build System* and Satirical Programming Language based on `.prabowo
 
 ## Installation & Compilation
 ```bash
-git clone https://github.com
+git clone https://github.com/Rhezaagit/prabowo.git
 cd prabowo
 gcc ./*.c -o prabowo
 ```
