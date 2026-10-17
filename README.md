@@ -30,7 +30,7 @@ bahas_mbg issues {
 }
 
 pidato {
-  c{"echo " !var}
+  c{"echo " "di " "papua " "harus tanam " "sawit"}
   $bahas_mbg{!var}
 }
 ```
