@@ -1,4 +1,4 @@
-# Prabowo-Lang (.prabowo)
+# Prabowo-Lang (prabowo)
 
 An *Esoteric Build System* and Satirical Programming Language based on `.prabowo` files. It combines automated code compilation (similar to Makefile)
 
@@ -22,8 +22,15 @@ Run the interpreter with your script file:
 Make Sure That `exampleprabowo` renamed to `.prabowo`
 
 ## Code Example
-```text
+```conf
+!var = c{"keracunan " "mbg " "itu sakit perut biasa"}
+
+bahas_mbg issues {
+    c{"echo " !issues}
+}
+
 pidato {
   c{"echo " "di " "papua " "harus tanam " "sawit"}
+  $bahas_mbg{!var}
 }
 ```
