@@ -500,11 +500,6 @@ bool Eval(Parser* parser, char* run) {
 
   Eval_Evaluate(parser, parser->root);
 
-//  for (size_t i = 0; i < info_var_stack->length; i++) {
-//    var_info info = List_At(info_var_stack, i, var_info);
-//    printf("%s: %s\n", info.name, info.value);
-//  }
-
   Eval_RemoveStackPointer(info_var_stack->length - 1);
   List_Destroy(info_var_stack);
   return true;

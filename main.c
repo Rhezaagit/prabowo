@@ -1,8 +1,7 @@
-//#define UTIL_NO_ERRORS
-#include "eval.h"
 #define UTIL_DEFINITION
 #include "util.h"
 
+#include "eval.h"
 #include "lexer.h"
 #include "parser.h"
 
@@ -26,12 +25,6 @@ int main(int argc, char* argv[]) {
 
   Lexer_Start(lexer);
 
-//  for (size_t i = 0; i < lexer->list_token->length; i++) {
-//    Lexer_Token* token = List_At(lexer->list_token, i, Lexer_Token*);
-//
-//    printf("(%s) <= %s %lu:%lu\n", token->name, Lexer_Token_TypeToString(token->type), token->row, token->col);
-//  }
-
   Parser* parser = Parser_Create(lexer);
   if (!parser) {
     free((void*)files_buffer);
@@ -41,7 +34,6 @@ int main(int argc, char* argv[]) {
 
   Parser_Start(parser);
   if (parser->success) {
-    //Parser_Node_Print(parser->root);
     Eval(parser, (argc > 2) ? NULL : argv[1]);
   }
 
